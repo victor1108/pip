@@ -331,7 +331,7 @@ class UploadWindow(QtWidgets.QDialog):
 
     def transcribe(self, file_path):
         try:
-            openai.api_key = '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'
+            openai.api_key = '0sk-tifdeUVE5oeV8RpW146NT3BlbkFJeddkwiIzdj4MprPeeQw0'
             audio_file = open(file_path, "rb")
             transcript = openai.Audio.transcribe(model="whisper-1", file=audio_file, response_format="text")
             text = transcript.replace(" ", "")
@@ -2232,7 +2232,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def transcribe(self, file_path):
         try:
-            openai.api_key = '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'
+            openai.api_key = '0sk-tifdeUVE5oeV8RpW146NT3BlbkFJeddkwiIzdj4MprPeeQw0'
             audio_file = open(file_path, "rb")
             transcript = openai.Audio.transcribe(model="whisper-1", file=audio_file, response_format="text")
             text = transcript.replace(" ", "")
